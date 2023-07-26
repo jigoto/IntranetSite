@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenkiGanko</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking the external CSS file -->
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tech-blogs">Tech Blogs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Welcome to Tech Blog</h1>
+            <!-- Add your home page content here -->
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <!-- Add your contact information and form here -->
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <!-- Add information about yourself or your blog here -->
+        </section>
+
+        <!-- Tech Blogs Section -->
+        <section id="tech-blogs">
+            <h2>Tech Blogs</h2>
+            <!-- Add your tech-related blog posts here -->
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        // Smooth scrolling when clicking on navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerOffset = 70; // Adjust this value if you have a fixed header
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
